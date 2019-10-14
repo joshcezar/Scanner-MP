@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 import static org.antlr.v4.runtime.CharStreams.fromFileName;
 
-public class TestLexer {
+public class Scanner {
 
     public static void main(String[] args) throws Exception {
         String filename = "testinputs.txt";
@@ -14,11 +14,21 @@ public class TestLexer {
 
         Token token = lexer.nextToken();
         ArrayList<Token> tokens = new ArrayList<>();
-        ArrayList<String> tokentypes = new ArrayList<>();
         while (token.getType() != MingoXDLexer.EOF) {
             tokens.add(token);
             token = lexer.nextToken();
-            if(token == lexer.Key)
+            if(token.getType() == lexer.Keyword) {
+                System.out.println("input = " + input);
+                System.out.println("Keyword");
+            }
+            else if(token.getType() == lexer.Identifier)
+                System.out.println("Identifier");
+            else if(token.getType() == lexer.Operator)
+                System.out.println("Operator");
+            else if(token.getType() == lexer.Literal)
+                System.out.println("Literal");
+            else if(token.getType() == lexer.Separator)
+                System.out.println("Separator");
         }
     }
 }

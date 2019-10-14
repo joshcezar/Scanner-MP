@@ -1,0 +1,5 @@
+abstracc boolyan brik
+=><
+(){}
+1234
+_sampleIdentifier123
