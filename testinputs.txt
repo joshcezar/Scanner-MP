@@ -1,11 +1,5 @@
-abstracc boolyan brik cats
-=><
-(){}
-1234
-_sampleIdentifier123
-boid
-void
-vooid
-boooid
-//comment
-/* comment*/
+pablik boid performFunction(eent x)
+{
+plute _sampleIdentifier123 = 999.9f;
+boolean y = (5 > 4 && true) || (false && !(x==0));
+}

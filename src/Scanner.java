@@ -8,26 +8,28 @@ import static org.antlr.v4.runtime.CharStreams.fromFileName;
 public class Scanner {
 
     public static void main(String[] args) throws Exception {
-        String filename = "testinputs.txt";
-        CharStream input = fromFileName(filename);
-        MingoXDLexer lexer = new MingoXDLexer(input);
+        String file = "testinputs.txt";
+        CharStream inputs = fromFileName(file);
+        MingoXDLexer lexer = new MingoXDLexer(inputs);
         Token token = lexer.nextToken();
-        ArrayList<Token> tokens = new ArrayList<>();
         while (token.getType() != MingoXDLexer.EOF) {
             if(token.getType() == lexer.Keyword) {
-                System.out.println("Keyword");
+                System.out.println(token.getText() + " Keyword");
             }
-            else if(token.getType() == lexer.Identifier)
-                System.out.println("Identifier");
-            else if(token.getType() == lexer.Operator)
-                System.out.println("Operator");
-            else if(token.getType() == lexer.Literal)
-                System.out.println("Literal");
-            else if(token.getType() == lexer.Separator)
-                System.out.println("Separator");
+            else if(token.getType() == lexer.Identifier) {
+                System.out.println(token.getText() + " Identifier");
+        }
+            else if(token.getType() == lexer.Operator) {
+                System.out.println(token.getText() + " Operator");
+            }
+            else if(token.getType() == lexer.Literal) {
+                System.out.println(token.getText() + " Literal");
+            }
+            else if(token.getType() == lexer.Separator) {
+                System.out.println(token.getText() + " Separator");
+            }
             else
                 System.out.println("Other");
-            tokens.add(token);
             token = lexer.nextToken();
         }
     }
