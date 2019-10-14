@@ -15,10 +15,7 @@ public class Scanner {
         Token token = lexer.nextToken();
         ArrayList<Token> tokens = new ArrayList<>();
         while (token.getType() != MingoXDLexer.EOF) {
-            tokens.add(token);
-            token = lexer.nextToken();
             if(token.getType() == lexer.Keyword) {
-                System.out.println("input = " + input);
                 System.out.println("Keyword");
             }
             else if(token.getType() == lexer.Identifier)
@@ -29,6 +26,8 @@ public class Scanner {
                 System.out.println("Literal");
             else if(token.getType() == lexer.Separator)
                 System.out.println("Separator");
+            tokens.add(token);
+            token = lexer.nextToken();
         }
     }
 }
