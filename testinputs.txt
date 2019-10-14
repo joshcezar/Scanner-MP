@@ -3,3 +3,9 @@ abstracc boolyan brik cats
 (){}
 1234
 _sampleIdentifier123
+boid
+void
+vooid
+boooid
+//comment
+/* comment*/

@@ -11,7 +11,6 @@ public class Scanner {
         String filename = "testinputs.txt";
         CharStream input = fromFileName(filename);
         MingoXDLexer lexer = new MingoXDLexer(input);
-
         Token token = lexer.nextToken();
         ArrayList<Token> tokens = new ArrayList<>();
         while (token.getType() != MingoXDLexer.EOF) {
@@ -26,6 +25,8 @@ public class Scanner {
                 System.out.println("Literal");
             else if(token.getType() == lexer.Separator)
                 System.out.println("Separator");
+            else
+                System.out.println("Other");
             tokens.add(token);
             token = lexer.nextToken();
         }
