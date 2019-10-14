@@ -1,5 +1,6 @@
 lexer grammar MingoXDLexer;
 //KEYWORDS
+/*
 ABSTRACT : 'abstracc';
 BOOLEAN : 'boolyan';
 BREAK : 'brik';
@@ -36,7 +37,34 @@ THROWS : 'thrus';
 TRY : 'try';
 VOID : 'boid';
 WHILE : 'wayl';
+*/
+Keyword : 'abstracc' | 'boolyan' | 'brik' | 'cats' | 'charot' | 'klas' | 'konst' | 'dududu' | 'dubol' | 'ils'
+        | 'ekstinds' | 'pinal' | 'pinally' | 'plute' | 'por' | 'ip' | 'implants' | 'impowrt' | 'instanceop' | 'eent'
+        | 'enterpeys' | 'luung' | 'nyo' | 'pakeyds' | 'praybeyt' | 'prutiktid' | 'pablik' | 'retorn' | 'istatik'
+        | 'souper' | 'dis' | 'thru' | 'thrus' | 'try' | 'boid' | 'wayl'
+        ;
 
+Operator : '=' | '>' | '<' | '!' | '~' | '?' | ':' | '==' | '<=' | '>=' | '!=' | '&&' | '||' | '++' | '--' | '+'
+           | '-' | '*' | '/' | '^' | '%' | '->' | '::' | '+=' | '-=' | '*=' | '/='
+           ;
+Separator : '(' | ')' | '{' | '}' | '[' | ']' | ';' | ',' | '.'
+          ;
+Literal : DecimalIntegerLiteral | HexIntegerLiteral | OctalIntegerLiteral | BinaryIntegerLiteral | BooleanLiteral
+        | CharacterLiteral | DecimalFloatingPointLiteral | FloatingPointLiteral | HexadecimalFloatingPointLiteral
+        | NullLiteral | StringLiteral
+        ;
+/*
+//SEPARATORS
+PARENL : '(';
+PARENR : ')';
+BRACEL : '{';
+BRACER : '}';
+BRACKL : '[';
+BRACKR : ']';
+SEMI : ';';
+COMMA : ',';
+DOT : '.';
+*/
 //INTEGER LITERALS
 IntegerLiteral
     :    DecimalIntegerLiteral
@@ -227,7 +255,7 @@ fragment StringCharacter
 NullLiteral
     :    'null'
     ;
-
+/*
 //SEPARATORS
 PARENL : '(';
 PARENR : ')';
@@ -240,6 +268,7 @@ COMMA : ',';
 DOT : '.';
 
 //OPERATORS
+
 ASSIGN : '=';
 GT : '>';
 LT : '<';
@@ -267,7 +296,7 @@ ADD_ASSIGN : '+=';
 SUB_ASSIGN : '-=';
 MUL_ASSIGN : '*=';
 DIV_ASSIGN : '/=';
-
+*/
 //IDENTIFIERS
 Identifier
     :    IdentifierStart IdentifierPart*
