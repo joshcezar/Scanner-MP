@@ -1,4 +1,4 @@
-// Generated from C:/Users/Josh/IdeaProjects/Scanner MP\MingoXDLexer.g4 by ANTLR 4.7.2
+// Generated from /Users/shenntinsay/Documents/College/4th Year/1st Term/CMPILER/[CMPILER] MP - Scanner/MingoXDLexer.g4 by ANTLR 4.7.2
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;

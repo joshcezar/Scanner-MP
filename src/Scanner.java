@@ -14,19 +14,19 @@ public class Scanner {
         Token token = lexer.nextToken();
         while (token.getType() != MingoXDLexer.EOF) {
             if(token.getType() == lexer.Keyword) {
-                System.out.println(token.getText() + " Keyword");
+                System.out.println("Keyword\t\t\t: " + token.getText());
             }
             else if(token.getType() == lexer.Identifier) {
-                System.out.println(token.getText() + " Identifier");
+                System.out.println("Identifier\t\t: " + token.getText());
         }
             else if(token.getType() == lexer.Operator) {
-                System.out.println(token.getText() + " Operator");
+                System.out.println("Operator\t\t: " + token.getText());
             }
             else if(token.getType() == lexer.Literal) {
-                System.out.println(token.getText() + " Literal");
+                System.out.println("Literal\t\t\t: " + token.getText());
             }
             else if(token.getType() == lexer.Separator) {
-                System.out.println(token.getText() + " Separator");
+                System.out.println("Separator\t\t: " + token.getText());
             }
             else
                 System.out.println("Other");
